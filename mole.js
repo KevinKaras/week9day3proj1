@@ -13,9 +13,12 @@ window.addEventListener("DOMContentLoaded", event =>{
     // console.log(moles);
     
     function popUpRandomMole(){
-        let randomTarget = getRandomInt(0, 8);
         let moles = document.querySelectorAll(".wgs__mole-head:not(.wgs__mole-head--whacked)");
-
+        if(moles.length === 0){
+            console.log("You won!")
+            return
+        }
+        let randomTarget = getRandomInt(0, moles.length);
         // while(moles[randomTarget])
         
         
@@ -28,9 +31,10 @@ window.addEventListener("DOMContentLoaded", event =>{
         head.addEventListener("click", event =>{
 
             head.classList.add("wgs__mole-head--whacked")
-            hideMole(head)
+            //hideMole(head)
+            head.classList.add('wgs__mole-head--hidden')
         })
-        setTimeout(()=>hideMole(head), 3000);
+        setTimeout(()=>hideMole(head), 1000);
 
     }
     function hideMole(head){

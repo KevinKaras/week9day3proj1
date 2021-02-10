@@ -6,9 +6,8 @@
     height: 241px;
     position: relative;
     width: 320px;
-    display: inline-block;
+    display: flex;
     overflow: hidden;
-    border: 1px solid black;
 }
 
 .wgs__mole-head{
@@ -38,6 +37,8 @@
 .pf {
     display: flex;
     flex-flow: row wrap;
+    justify-content: space-around;
+    padding-top: 10px;
 
     /* grid-template-columns: 320px 320px 320px 320px;
     grid-template-rows: auto; */
@@ -45,5 +46,21 @@
         ""
         ""
         ""; */
+}
+.header {
+    background-color: cornflowerblue;
+    border: 3px solid black;
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-around;
+    color: white;
+    font-size: 28px;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
+    font-weight: bold;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.header__hit-count{
+    
 }
 
